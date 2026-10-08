@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>io.github.anegoda1995.shuttheduckoff</string>
+	<key>CFBundleName</key>
+	<string>ShutTheDuckOff</string>
+	<key>CFBundleDisplayName</key>
+	<string>ShutTheDuckOff</string>
+	<key>CFBundleExecutable</key>
+	<string>ShutTheDuckOff</string>
+	<key>CFBundleIconFile</key>
+	<string>AppIcon</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleAllowMixedLocalizations</key>
+	<true/>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.2</string>
+	<key>LSUIElement</key>
+	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>Copyright © 2026 anegoda1995. GPL-3.0-or-later.</string>
+	<key>NSAudioCaptureUsageDescription</key>
+	<string>During calls ShutTheDuckOff plays other apps' sound through itself, so the call cannot turn it down. Nothing is recorded or stored.</string>
+</dict>
+</plist>

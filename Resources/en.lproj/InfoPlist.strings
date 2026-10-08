@@ -1,0 +1,1 @@
+"NSAudioCaptureUsageDescription" = "During calls ShutTheDuckOff plays other apps' sound through itself, so the call cannot turn it down. Nothing is recorded or stored.";

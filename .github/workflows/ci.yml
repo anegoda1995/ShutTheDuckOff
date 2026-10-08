@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build app and VLC plugin (arm64 + x86_64)
+        run: make all
+
+      - name: Check the bundle
+        run: |
+          lipo -info build/ShutTheDuckOff.app/Contents/MacOS/ShutTheDuckOff
+          lipo -info build/libnoduck_plugin.dylib
+          codesign --verify --verbose build/ShutTheDuckOff.app
+          plutil -lint Resources/Info.plist Resources/*.lproj/*.strings
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ShutTheDuckOff-${{ github.sha }}
+          path: |
+            build/ShutTheDuckOff.app
+            build/libnoduck_plugin.dylib
+
+  shellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: shellcheck scripts/*.sh
